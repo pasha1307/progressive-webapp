@@ -12,21 +12,21 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <meta name="apple-mobile-web-app-title" content="Winchester Wellness Centre">
-  <link rel="apple-touch-icon" sizes="57x57" href="./images/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="./images/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="./images/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="./images/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="./images//apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="./images/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="./images/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="./images/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="./images/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="./images/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./images/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./images/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./images/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./images/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="./images/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="./images/icons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
 </head>
@@ -65,9 +65,9 @@
       <div class="carousel-inner">
         {{#each products}}
           {{#if @first}}
-            <div class="item active"><img src="images/products/{{filename}}.jpg" alt="{{name}} photo"></div>
+            <div class="item active"><img src="./images/products/{{filename}}.jpg" alt="{{name}} photo"></div>
           {{else}}
-            <div class="item"><img src="images/products/{{filename}}.jpg" alt="{{name}} photo"></div>
+            <div class="item"><img src="./images/products/{{filename}}.jpg" alt="{{name}} photo"></div>
           {{/if}}
         {{/each}}
       </div><!--carousel inner -->
@@ -85,7 +85,7 @@
       <script id="services-template" type="text/x-handlebars-template">
         {{#each staff}}
           <div class="col-xs-3 openpetmodal" data-toggle="modal" data-target="#wisdompetmodal" data-name="{{owner}}" data-owner="{{services}}" data-brief="{{brief}}" data-price="{{address}}" data-image="{{filename}}">
-            <img class="img-circle" src="images/products/{{filename}}_sq.jpg" alt="{{owner}} photo"/>
+            <img class="img-circle" src="./images/products/{{filename}}_sq.jpg" alt="{{owner}} photo"/>
           </div><!-- column -->
         {{/each}}
       </script>
@@ -101,7 +101,7 @@
         {{#each products}}
           <div class="appointment media openpetmodal" data-toggle="modal" data-target="#wisdompetmodal" data-name="{{name}}" data-owner="{{owner}}" data-brief="{{brief}}" data-time="{{time}} for" data-price="${{price}}" data-image="{{filename}}">
             <div class="media-left media-top">
-              <img class="media-object appointment-img img-rounded" src="images/products/{{filename}}_sq.jpg" alt="{{name}} photo">
+              <img class="media-object appointment-img img-rounded" src="./images/products/{{filename}}_sq.jpg" alt="{{name}} photo">
             </div><!-- media-left media-top -->
             <div class="media-body">
               <h3 class="media-heading appointments-heading">{{name}}, <span class="appointment-breed">{{owner}}</span></h3>
