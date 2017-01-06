@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Progressive Web Apps</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   <link rel="stylesheet" href="./css/app.css">
   <link rel="manifest" href="./manifest.json">
 
@@ -81,41 +83,48 @@
   <div class="page" id="services">
     <div class="container">
       <h2 class="page-headline">Massage Therapists</h2>
-      <script id="services-template" type="text/x-handlebars-template">
-        {{#each staff}}
+      <div class="row">
+        <script id="services-template" type="text/x-handlebars-template">
+          {{#each staff}}
           <div class="col-xs-3 openpetmodal" data-toggle="modal" data-target="#wisdompetmodal" data-name="{{owner}}" data-owner="{{services}}" data-brief="{{brief}}" data-price="{{address}}" data-image="{{filename}}">
             <img class="img-circle" src="./images/products/{{filename}}_sq.jpg" alt="{{owner}} photo"/>
           </div><!-- column -->
-        {{/each}}
-      </script>
-      <!--<a-->
-              <!--href="https://clients.mindbodyonline.com/classic/ws?studioid=49590&sessionChecked=true" target="_blank">-->
-        <button type="button" class="btn btn-primary">Make an Appointment</button>
-      <!--</a>-->
-      <div id="services-content">
+          {{/each}}
+        </script>
+
+        <div id="services-content"></div>
+        <div class="col-md-12 text-center">
+          <a
+                  href="https://clients.mindbodyonline.com/classic/ws?studioid=49590&sessionChecked=true" target="_blank">
+            <button type="button" class="btn btn-success">Make an Appointment</button>
+          </a>
+        </div>
+
 
       </div>
+
     </div><!-- container -->
   </div><!-- page-services -->
   <div class="page" id="appointments">
     <div class="container">
       <h2 class="page-headline">Services</h2>
-      <p>Massage Therapy and Skin Care</p>
+<div class="row">
+  <script id="appointments-template" type="text/x-handlebars-template">
+    {{#each products}}
+    <div class="appointment media openpetmodal" data-toggle="modal" data-target="#wisdompetmodal" data-name="{{name}}" data-owner="{{owner}}" data-brief="{{brief}}" data-time="{{time}} for" data-price="${{price}}" data-image="{{filename}}">
+      <div class="media-left media-top">
+        <img class="media-object appointment-img img-rounded" src="./images/products/{{filename}}_sq.jpg" alt="{{name}} photo">
+      </div><!-- media-left media-top -->
+      <div class="media-body">
+        <h3 class="media-heading appointments-heading">{{name}}, <span class="appointment-breed">{{owner}}</span></h3>
+        <div class="appointment-owner"><span class="appointment-owner-title">Time: </span> <span class="appointment-owner-name">{{time}}</span></div>
+        <div class="appointment-reason">Price: {{price}}</div>
+      </div><!-- media-body -->
+    </div><!-- appointment media openpetmodal -->
+    {{/each}}
+  </script>
+</div>
 
-      <script id="appointments-template" type="text/x-handlebars-template">
-        {{#each products}}
-          <div class="appointment media openpetmodal" data-toggle="modal" data-target="#wisdompetmodal" data-name="{{name}}" data-owner="{{owner}}" data-brief="{{brief}}" data-time="{{time}} for" data-price="${{price}}" data-image="{{filename}}">
-            <div class="media-left media-top">
-              <img class="media-object appointment-img img-rounded" src="./images/products/{{filename}}_sq.jpg" alt="{{name}} photo">
-            </div><!-- media-left media-top -->
-            <div class="media-body">
-              <h3 class="media-heading appointments-heading">{{name}}, <span class="appointment-breed">{{owner}}</span></h3>
-              <div class="appointment-owner"><span class="appointment-owner-title">Time: </span> <span class="appointment-owner-name">{{time}}</span></div>
-              <div class="appointment-reason">Price: {{price}}</div>
-            </div><!-- media-body -->
-          </div><!-- appointment media openpetmodal -->
-        {{/each}}
-      </script>
       <div id="appointments-content"></div>
     </div><!-- container -->
   </div><!-- page-appointments -->
