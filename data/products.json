@@ -1,4 +1,20 @@
 {
+  "slideshow": [
+    {"id": "1", "filename": "w4"},
+    {"id": "2", "filename": "w15"},
+    {"id": "3", "filename": "w1"},
+    {"id": "4", "filename": "w2"},
+    {"id": "6", "filename": "w3"},
+    {"id": "7", "filename": "a3"},
+    {"id": "9", "filename": "w5"},
+    {"id": "10", "filename": "w6"},
+    {"id": "11", "filename": "w7"},
+    {"id": "12", "filename": "a1"},
+    {"id": "13", "filename": "w9"},
+    {"id": "14", "filename": "w10"},
+    {"id": "15", "filename": "w11"},
+    {"id": "16", "filename": "w12"}
+  ],
   "products": [
     {"name": "Ultrasonic Facial Treatment",
       "owner": "Svetlana",

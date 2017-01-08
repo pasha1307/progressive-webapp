@@ -65,11 +65,11 @@
   <script id="slideshow-template" type="text/x-handlebars-template">
     <div class="carousel fade" data-ride="carousel" id="slideshow">
       <div class="carousel-inner">
-        {{#each products}}
+        {{#each slideshow}}
           {{#if @first}}
-            <div class="item active"><img src="./images/products/{{filename}}.jpg" alt="{{name}} photo"></div>
+            <div class="item active"><img src="./images/products/{{filename}}.jpg" alt="{{id}} photo"></div>
           {{else}}
-            <div class="item"><img src="./images/products/{{filename}}.jpg" alt="{{name}} photo"></div>
+            <div class="item"><img src="./images/products/{{filename}}.jpg" alt="{{id}} photo"></div>
           {{/if}}
         {{/each}}
       </div><!--carousel inner -->
@@ -92,8 +92,8 @@
           {{/each}}
         </script>
 
-        <div id="services-content"></div>
-        <div class="col-md-12 text-center">
+        <div id="services-content" class="text-center"></div>
+        <div class="col-xs-12 text-center">
           <a
                   href="https://clients.mindbodyonline.com/classic/ws?studioid=49590&sessionChecked=true" target="_blank">
             <button type="button" class="btn btn-success">Make an Appointment</button>
